@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>core package &mdash; Mediaverse  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mediaverse
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">core package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-core.admin">core.admin module</a><ul>
+<li><a class="reference internal" href="#core.admin.BorrowTransactionAdmin"><code class="docutils literal notranslate"><span class="pre">BorrowTransactionAdmin</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.BorrowTransactionAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">BorrowTransactionAdmin.list_display</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.BorrowTransactionAdmin.media"><code class="docutils literal notranslate"><span class="pre">BorrowTransactionAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.CategoryFilter"><code class="docutils literal notranslate"><span class="pre">CategoryFilter</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.CategoryFilter.lookups"><code class="docutils literal notranslate"><span class="pre">CategoryFilter.lookups()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.CategoryFilter.parameter_name"><code class="docutils literal notranslate"><span class="pre">CategoryFilter.parameter_name</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.CategoryFilter.queryset"><code class="docutils literal notranslate"><span class="pre">CategoryFilter.queryset()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.CategoryFilter.title"><code class="docutils literal notranslate"><span class="pre">CategoryFilter.title</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.IsActiveFilter"><code class="docutils literal notranslate"><span class="pre">IsActiveFilter</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.IsActiveFilter.lookups"><code class="docutils literal notranslate"><span class="pre">IsActiveFilter.lookups()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsActiveFilter.parameter_name"><code class="docutils literal notranslate"><span class="pre">IsActiveFilter.parameter_name</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsActiveFilter.queryset"><code class="docutils literal notranslate"><span class="pre">IsActiveFilter.queryset()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsActiveFilter.title"><code class="docutils literal notranslate"><span class="pre">IsActiveFilter.title</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.IsBorrowAvailableFilter"><code class="docutils literal notranslate"><span class="pre">IsBorrowAvailableFilter</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.IsBorrowAvailableFilter.lookups"><code class="docutils literal notranslate"><span class="pre">IsBorrowAvailableFilter.lookups()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsBorrowAvailableFilter.parameter_name"><code class="docutils literal notranslate"><span class="pre">IsBorrowAvailableFilter.parameter_name</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsBorrowAvailableFilter.queryset"><code class="docutils literal notranslate"><span class="pre">IsBorrowAvailableFilter.queryset()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsBorrowAvailableFilter.title"><code class="docutils literal notranslate"><span class="pre">IsBorrowAvailableFilter.title</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.IsDLAvailableFilter"><code class="docutils literal notranslate"><span class="pre">IsDLAvailableFilter</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.IsDLAvailableFilter.lookups"><code class="docutils literal notranslate"><span class="pre">IsDLAvailableFilter.lookups()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsDLAvailableFilter.parameter_name"><code class="docutils literal notranslate"><span class="pre">IsDLAvailableFilter.parameter_name</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsDLAvailableFilter.queryset"><code class="docutils literal notranslate"><span class="pre">IsDLAvailableFilter.queryset()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsDLAvailableFilter.title"><code class="docutils literal notranslate"><span class="pre">IsDLAvailableFilter.title</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.IsMediathekarFilter"><code class="docutils literal notranslate"><span class="pre">IsMediathekarFilter</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.IsMediathekarFilter.lookups"><code class="docutils literal notranslate"><span class="pre">IsMediathekarFilter.lookups()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsMediathekarFilter.parameter_name"><code class="docutils literal notranslate"><span class="pre">IsMediathekarFilter.parameter_name</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsMediathekarFilter.queryset"><code class="docutils literal notranslate"><span class="pre">IsMediathekarFilter.queryset()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.IsMediathekarFilter.title"><code class="docutils literal notranslate"><span class="pre">IsMediathekarFilter.title</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.ResourceAdmin"><code class="docutils literal notranslate"><span class="pre">ResourceAdmin</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.ResourceAdmin.get_categories"><code class="docutils literal notranslate"><span class="pre">ResourceAdmin.get_categories()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.ResourceAdmin.get_types"><code class="docutils literal notranslate"><span class="pre">ResourceAdmin.get_types()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.ResourceAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">ResourceAdmin.list_display</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.ResourceAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">ResourceAdmin.list_filter</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.ResourceAdmin.media"><code class="docutils literal notranslate"><span class="pre">ResourceAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.TypeFilter"><code class="docutils literal notranslate"><span class="pre">TypeFilter</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.TypeFilter.lookups"><code class="docutils literal notranslate"><span class="pre">TypeFilter.lookups()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.TypeFilter.parameter_name"><code class="docutils literal notranslate"><span class="pre">TypeFilter.parameter_name</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.TypeFilter.queryset"><code class="docutils literal notranslate"><span class="pre">TypeFilter.queryset()</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.TypeFilter.title"><code class="docutils literal notranslate"><span class="pre">TypeFilter.title</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.admin.UserAdmin"><code class="docutils literal notranslate"><span class="pre">UserAdmin</span></code></a><ul>
+<li><a class="reference internal" href="#core.admin.UserAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">UserAdmin.list_display</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.UserAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">UserAdmin.list_filter</span></code></a></li>
+<li><a class="reference internal" href="#core.admin.UserAdmin.media"><code class="docutils literal notranslate"><span class="pre">UserAdmin.media</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-core.apps">core.apps module</a><ul>
+<li><a class="reference internal" href="#core.apps.CoreConfig"><code class="docutils literal notranslate"><span class="pre">CoreConfig</span></code></a><ul>
+<li><a class="reference internal" href="#core.apps.CoreConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">CoreConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#core.apps.CoreConfig.name"><code class="docutils literal notranslate"><span class="pre">CoreConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-core.models">core.models module</a><ul>
+<li><a class="reference internal" href="#core.models.BorrowTransaction"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.borrow_date"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.borrow_date</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.due_date"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.due_date</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.extend_due_date"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.extend_due_date()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.get_next_by_borrow_date"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.get_next_by_borrow_date()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.get_next_by_due_date"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.get_next_by_due_date()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.get_previous_by_borrow_date"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.get_previous_by_borrow_date()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.get_previous_by_due_date"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.get_previous_by_due_date()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.id"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.number_of_extends"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.number_of_extends</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.objects"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.objects</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.resource"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.resource</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.resource_id"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.resource_id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.return_resource"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.return_resource()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.returned"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.returned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.user"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.user</span></code></a></li>
+<li><a class="reference internal" href="#core.models.BorrowTransaction.user_id"><code class="docutils literal notranslate"><span class="pre">BorrowTransaction.user_id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.Category"><code class="docutils literal notranslate"><span class="pre">Category</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.Category.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Category.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Category.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Category.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Category.id"><code class="docutils literal notranslate"><span class="pre">Category.id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Category.name"><code class="docutils literal notranslate"><span class="pre">Category.name</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Category.objects"><code class="docutils literal notranslate"><span class="pre">Category.objects</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Category.resource_set"><code class="docutils literal notranslate"><span class="pre">Category.resource_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Category.user"><code class="docutils literal notranslate"><span class="pre">Category.user</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Category.user_id"><code class="docutils literal notranslate"><span class="pre">Category.user_id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.FavouriteItem"><code class="docutils literal notranslate"><span class="pre">FavouriteItem</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.FavouriteItem.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.favourite_list"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.favourite_list</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.favourite_list_id"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.favourite_list_id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.id"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.objects"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.objects</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.resource"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.resource</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.resource_id"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.resource_id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteItem.share"><code class="docutils literal notranslate"><span class="pre">FavouriteItem.share</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.FavouriteList"><code class="docutils literal notranslate"><span class="pre">FavouriteList</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.FavouriteList.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">FavouriteList.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteList.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">FavouriteList.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteList.id"><code class="docutils literal notranslate"><span class="pre">FavouriteList.id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteList.items"><code class="docutils literal notranslate"><span class="pre">FavouriteList.items</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteList.objects"><code class="docutils literal notranslate"><span class="pre">FavouriteList.objects</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteList.title"><code class="docutils literal notranslate"><span class="pre">FavouriteList.title</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteList.user"><code class="docutils literal notranslate"><span class="pre">FavouriteList.user</span></code></a></li>
+<li><a class="reference internal" href="#core.models.FavouriteList.user_id"><code class="docutils literal notranslate"><span class="pre">FavouriteList.user_id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.Resource.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Resource.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Resource.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.author"><code class="docutils literal notranslate"><span class="pre">Resource.author</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.borrow"><code class="docutils literal notranslate"><span class="pre">Resource.borrow()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.borrowtransaction_set"><code class="docutils literal notranslate"><span class="pre">Resource.borrowtransaction_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.categories"><code class="docutils literal notranslate"><span class="pre">Resource.categories</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.code"><code class="docutils literal notranslate"><span class="pre">Resource.code</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.description"><code class="docutils literal notranslate"><span class="pre">Resource.description</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.favourite_items"><code class="docutils literal notranslate"><span class="pre">Resource.favourite_items</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.file"><code class="docutils literal notranslate"><span class="pre">Resource.file</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.get_actual_borrowed_resources"><code class="docutils literal notranslate"><span class="pre">Resource.get_actual_borrowed_resources()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.get_previous_borrowed_resources"><code class="docutils literal notranslate"><span class="pre">Resource.get_previous_borrowed_resources()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.get_year_display"><code class="docutils literal notranslate"><span class="pre">Resource.get_year_display()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.id"><code class="docutils literal notranslate"><span class="pre">Resource.id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.is_available"><code class="docutils literal notranslate"><span class="pre">Resource.is_available()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.is_available_to_borrow"><code class="docutils literal notranslate"><span class="pre">Resource.is_available_to_borrow</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.is_available_to_download"><code class="docutils literal notranslate"><span class="pre">Resource.is_available_to_download</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.link"><code class="docutils literal notranslate"><span class="pre">Resource.link</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.objects"><code class="docutils literal notranslate"><span class="pre">Resource.objects</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.title"><code class="docutils literal notranslate"><span class="pre">Resource.title</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.types"><code class="docutils literal notranslate"><span class="pre">Resource.types</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.user"><code class="docutils literal notranslate"><span class="pre">Resource.user</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.user_id"><code class="docutils literal notranslate"><span class="pre">Resource.user_id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Resource.year"><code class="docutils literal notranslate"><span class="pre">Resource.year</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.Type"><code class="docutils literal notranslate"><span class="pre">Type</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.Type.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Type.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Type.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Type.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Type.id"><code class="docutils literal notranslate"><span class="pre">Type.id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Type.name"><code class="docutils literal notranslate"><span class="pre">Type.name</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Type.objects"><code class="docutils literal notranslate"><span class="pre">Type.objects</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Type.resource_set"><code class="docutils literal notranslate"><span class="pre">Type.resource_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Type.user"><code class="docutils literal notranslate"><span class="pre">Type.user</span></code></a></li>
+<li><a class="reference internal" href="#core.models.Type.user_id"><code class="docutils literal notranslate"><span class="pre">Type.user_id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.User.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">User.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">User.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.USERNAME_FIELD"><code class="docutils literal notranslate"><span class="pre">User.USERNAME_FIELD</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.auth_token"><code class="docutils literal notranslate"><span class="pre">User.auth_token</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.borrowtransaction_set"><code class="docutils literal notranslate"><span class="pre">User.borrowtransaction_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.category_set"><code class="docutils literal notranslate"><span class="pre">User.category_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.email"><code class="docutils literal notranslate"><span class="pre">User.email</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.favourite_list"><code class="docutils literal notranslate"><span class="pre">User.favourite_list</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.groups"><code class="docutils literal notranslate"><span class="pre">User.groups</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.id"><code class="docutils literal notranslate"><span class="pre">User.id</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.is_active"><code class="docutils literal notranslate"><span class="pre">User.is_active</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.is_mediathekar"><code class="docutils literal notranslate"><span class="pre">User.is_mediathekar</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.is_staff"><code class="docutils literal notranslate"><span class="pre">User.is_staff</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.is_superuser"><code class="docutils literal notranslate"><span class="pre">User.is_superuser</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.last_login"><code class="docutils literal notranslate"><span class="pre">User.last_login</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.logentry_set"><code class="docutils literal notranslate"><span class="pre">User.logentry_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.name"><code class="docutils literal notranslate"><span class="pre">User.name</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.objects"><code class="docutils literal notranslate"><span class="pre">User.objects</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.password"><code class="docutils literal notranslate"><span class="pre">User.password</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.resource_set"><code class="docutils literal notranslate"><span class="pre">User.resource_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.type_set"><code class="docutils literal notranslate"><span class="pre">User.type_set</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.user_permissions"><code class="docutils literal notranslate"><span class="pre">User.user_permissions</span></code></a></li>
+<li><a class="reference internal" href="#core.models.User.username"><code class="docutils literal notranslate"><span class="pre">User.username</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.UserManager"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a><ul>
+<li><a class="reference internal" href="#core.models.UserManager.create_superuser"><code class="docutils literal notranslate"><span class="pre">UserManager.create_superuser()</span></code></a></li>
+<li><a class="reference internal" href="#core.models.UserManager.create_user"><code class="docutils literal notranslate"><span class="pre">UserManager.create_user()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.models.resource_file_path"><code class="docutils literal notranslate"><span class="pre">resource_file_path()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-core.views">core.views module</a></li>
+<li><a class="reference internal" href="#module-core">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mediaverse</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">core package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/core.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="core-package">
+<h1>core package<a class="headerlink" href="#core-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="core.migrations.html">core.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.migrations.html#module-core.migrations.0001_initial">core.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.migrations.html#core.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core.migrations.html#module-core.migrations.0002_remove_resource_types_resource_type">core.migrations.0002_remove_resource_types_resource_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.migrations.html#core.migrations.0002_remove_resource_types_resource_type.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0002_remove_resource_types_resource_type.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0002_remove_resource_types_resource_type.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core.migrations.html#module-core.migrations.0003_alter_resource_type">core.migrations.0003_alter_resource_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.migrations.html#core.migrations.0003_alter_resource_type.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0003_alter_resource_type.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0003_alter_resource_type.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core.migrations.html#module-core.migrations.0004_alter_resource_type">core.migrations.0004_alter_resource_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.migrations.html#core.migrations.0004_alter_resource_type.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0004_alter_resource_type.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0004_alter_resource_type.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core.migrations.html#module-core.migrations.0005_remove_resource_type_resource_types">core.migrations.0005_remove_resource_type_resource_types module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.migrations.html#core.migrations.0005_remove_resource_type_resource_types.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0005_remove_resource_type_resource_types.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.migrations.html#core.migrations.0005_remove_resource_type_resource_types.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core.migrations.html#module-core.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="core.tests.html">core.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.tests.html#module-core.tests.test_models">core.tests.test_models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.tests.html#core.tests.test_models.ModelTests"><code class="docutils literal notranslate"><span class="pre">ModelTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="core.tests.html#core.tests.test_models.ModelTests.test_create_recipe"><code class="docutils literal notranslate"><span class="pre">ModelTests.test_create_recipe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.tests.html#core.tests.test_models.ModelTests.test_create_superuser"><code class="docutils literal notranslate"><span class="pre">ModelTests.test_create_superuser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.tests.html#core.tests.test_models.ModelTests.test_create_user_with_username_successful"><code class="docutils literal notranslate"><span class="pre">ModelTests.test_create_user_with_username_successful()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.tests.html#core.tests.test_models.ModelTests.test_new_user_email_normalized"><code class="docutils literal notranslate"><span class="pre">ModelTests.test_new_user_email_normalized()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.tests.html#core.tests.test_models.ModelTests.test_new_user_without_email_raises_error"><code class="docutils literal notranslate"><span class="pre">ModelTests.test_new_user_without_email_raises_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.tests.html#core.tests.test_models.ModelTests.test_new_user_without_username_raises_error"><code class="docutils literal notranslate"><span class="pre">ModelTests.test_new_user_without_username_raises_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="core.tests.html#core.tests.test_models.create_user"><code class="docutils literal notranslate"><span class="pre">create_user()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="core.tests.html#module-core.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-core.admin">
+<span id="core-admin-module"></span><h2>core.admin module<a class="headerlink" href="#module-core.admin" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.BorrowTransactionAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">BorrowTransactionAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#BorrowTransactionAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.BorrowTransactionAdmin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.BorrowTransactionAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('user',</span> <span class="pre">'resource',</span> <span class="pre">'due_date')</span></em><a class="headerlink" href="#core.admin.BorrowTransactionAdmin.list_display" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.admin.BorrowTransactionAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#core.admin.BorrowTransactionAdmin.media" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.CategoryFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">CategoryFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#CategoryFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.CategoryFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleListFilter</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.CategoryFilter.lookups">
+<span class="sig-name descname"><span class="pre">lookups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#CategoryFilter.lookups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.CategoryFilter.lookups" title="Permalink to this definition"></a></dt>
+<dd><p>Must be overridden to return a list of tuples (value, verbose value)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.CategoryFilter.parameter_name">
+<span class="sig-name descname"><span class="pre">parameter_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'categories'</span></em><a class="headerlink" href="#core.admin.CategoryFilter.parameter_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.CategoryFilter.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#CategoryFilter.queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.CategoryFilter.queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Return the filtered queryset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.CategoryFilter.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Category'</span></em><a class="headerlink" href="#core.admin.CategoryFilter.title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.IsActiveFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">IsActiveFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsActiveFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsActiveFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleListFilter</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsActiveFilter.lookups">
+<span class="sig-name descname"><span class="pre">lookups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModelAdmin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsActiveFilter.lookups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsActiveFilter.lookups" title="Permalink to this definition"></a></dt>
+<dd><p>Must be overridden to return a list of tuples (value, verbose value)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsActiveFilter.parameter_name">
+<span class="sig-name descname"><span class="pre">parameter_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'is_active'</span></em><a class="headerlink" href="#core.admin.IsActiveFilter.parameter_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsActiveFilter.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QuerySet</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsActiveFilter.queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsActiveFilter.queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Return the filtered queryset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsActiveFilter.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Active</span> <span class="pre">Status'</span></em><a class="headerlink" href="#core.admin.IsActiveFilter.title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.IsBorrowAvailableFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">IsBorrowAvailableFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsBorrowAvailableFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsBorrowAvailableFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleListFilter</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsBorrowAvailableFilter.lookups">
+<span class="sig-name descname"><span class="pre">lookups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModelAdmin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsBorrowAvailableFilter.lookups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsBorrowAvailableFilter.lookups" title="Permalink to this definition"></a></dt>
+<dd><p>Must be overridden to return a list of tuples (value, verbose value)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsBorrowAvailableFilter.parameter_name">
+<span class="sig-name descname"><span class="pre">parameter_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'is_available_to_borrow'</span></em><a class="headerlink" href="#core.admin.IsBorrowAvailableFilter.parameter_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsBorrowAvailableFilter.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QuerySet</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsBorrowAvailableFilter.queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsBorrowAvailableFilter.queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Return the filtered queryset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsBorrowAvailableFilter.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Borrow</span> <span class="pre">Availability'</span></em><a class="headerlink" href="#core.admin.IsBorrowAvailableFilter.title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.IsDLAvailableFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">IsDLAvailableFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsDLAvailableFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsDLAvailableFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleListFilter</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsDLAvailableFilter.lookups">
+<span class="sig-name descname"><span class="pre">lookups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModelAdmin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsDLAvailableFilter.lookups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsDLAvailableFilter.lookups" title="Permalink to this definition"></a></dt>
+<dd><p>Must be overridden to return a list of tuples (value, verbose value)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsDLAvailableFilter.parameter_name">
+<span class="sig-name descname"><span class="pre">parameter_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'is_available_to_download'</span></em><a class="headerlink" href="#core.admin.IsDLAvailableFilter.parameter_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsDLAvailableFilter.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QuerySet</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsDLAvailableFilter.queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsDLAvailableFilter.queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Return the filtered queryset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsDLAvailableFilter.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Download</span> <span class="pre">Availability'</span></em><a class="headerlink" href="#core.admin.IsDLAvailableFilter.title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.IsMediathekarFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">IsMediathekarFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsMediathekarFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsMediathekarFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleListFilter</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsMediathekarFilter.lookups">
+<span class="sig-name descname"><span class="pre">lookups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModelAdmin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsMediathekarFilter.lookups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsMediathekarFilter.lookups" title="Permalink to this definition"></a></dt>
+<dd><p>Must be overridden to return a list of tuples (value, verbose value)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsMediathekarFilter.parameter_name">
+<span class="sig-name descname"><span class="pre">parameter_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'is_mediathekar'</span></em><a class="headerlink" href="#core.admin.IsMediathekarFilter.parameter_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.IsMediathekarFilter.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QuerySet</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#IsMediathekarFilter.queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.IsMediathekarFilter.queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Return the filtered queryset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.IsMediathekarFilter.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Permission'</span></em><a class="headerlink" href="#core.admin.IsMediathekarFilter.title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.ResourceAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">ResourceAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#ResourceAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.ResourceAdmin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelAdmin</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.ResourceAdmin.get_categories">
+<span class="sig-name descname"><span class="pre">get_categories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#ResourceAdmin.get_categories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.ResourceAdmin.get_categories" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.ResourceAdmin.get_types">
+<span class="sig-name descname"><span class="pre">get_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#ResourceAdmin.get_types"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.ResourceAdmin.get_types" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.ResourceAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('title',</span> <span class="pre">'author',</span> <span class="pre">'year',</span> <span class="pre">'is_available_to_borrow',</span> <span class="pre">'is_available_to_download',</span> <span class="pre">'get_categories',</span> <span class="pre">'get_types')</span></em><a class="headerlink" href="#core.admin.ResourceAdmin.list_display" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.ResourceAdmin.list_filter">
+<span class="sig-name descname"><span class="pre">list_filter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'core.admin.IsBorrowAvailableFilter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'core.admin.IsDLAvailableFilter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'core.admin.CategoryFilter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'core.admin.TypeFilter'&gt;)</span></em><a class="headerlink" href="#core.admin.ResourceAdmin.list_filter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.admin.ResourceAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#core.admin.ResourceAdmin.media" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.TypeFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">TypeFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#TypeFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.TypeFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleListFilter</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.TypeFilter.lookups">
+<span class="sig-name descname"><span class="pre">lookups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_admin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#TypeFilter.lookups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.TypeFilter.lookups" title="Permalink to this definition"></a></dt>
+<dd><p>Must be overridden to return a list of tuples (value, verbose value)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.TypeFilter.parameter_name">
+<span class="sig-name descname"><span class="pre">parameter_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'types'</span></em><a class="headerlink" href="#core.admin.TypeFilter.parameter_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.admin.TypeFilter.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#TypeFilter.queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.TypeFilter.queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Return the filtered queryset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.TypeFilter.title">
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Type'</span></em><a class="headerlink" href="#core.admin.TypeFilter.title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.admin.UserAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.admin.</span></span><span class="sig-name descname"><span class="pre">UserAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/admin.html#UserAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.admin.UserAdmin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.UserAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('username',</span> <span class="pre">'email',</span> <span class="pre">'is_active',</span> <span class="pre">'is_staff',</span> <span class="pre">'is_mediathekar')</span></em><a class="headerlink" href="#core.admin.UserAdmin.list_display" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.admin.UserAdmin.list_filter">
+<span class="sig-name descname"><span class="pre">list_filter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'core.admin.IsActiveFilter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'core.admin.IsMediathekarFilter'&gt;)</span></em><a class="headerlink" href="#core.admin.UserAdmin.list_filter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.admin.UserAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#core.admin.UserAdmin.media" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-core.apps">
+<span id="core-apps-module"></span><h2>core.apps module<a class="headerlink" href="#module-core.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.apps.CoreConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.apps.</span></span><span class="sig-name descname"><span class="pre">CoreConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/apps.html#CoreConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.apps.CoreConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.apps.CoreConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#core.apps.CoreConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.apps.CoreConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'core'</span></em><a class="headerlink" href="#core.apps.CoreConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-core.models">
+<span id="core-models-module"></span><h2>core.models module<a class="headerlink" href="#module-core.models" title="Permalink to this heading"></a></h2>
+<p>Database models.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">BorrowTransaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#BorrowTransaction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.BorrowTransaction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Borrow transaction object.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#core.models.BorrowTransaction.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#core.models.BorrowTransaction.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.borrow_date">
+<span class="sig-name descname"><span class="pre">borrow_date</span></span><a class="headerlink" href="#core.models.BorrowTransaction.borrow_date" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.due_date">
+<span class="sig-name descname"><span class="pre">due_date</span></span><a class="headerlink" href="#core.models.BorrowTransaction.due_date" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.extend_due_date">
+<span class="sig-name descname"><span class="pre">extend_due_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_due_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#BorrowTransaction.extend_due_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.BorrowTransaction.extend_due_date" title="Permalink to this definition"></a></dt>
+<dd><p>Extend the due date of the borrow transaction.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.get_next_by_borrow_date">
+<span class="sig-name descname"><span class="pre">get_next_by_borrow_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">borrow_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.models.BorrowTransaction.get_next_by_borrow_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.get_next_by_due_date">
+<span class="sig-name descname"><span class="pre">get_next_by_due_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">due_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.models.BorrowTransaction.get_next_by_due_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.get_previous_by_borrow_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_borrow_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">borrow_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.models.BorrowTransaction.get_previous_by_borrow_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.get_previous_by_due_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_due_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">due_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.models.BorrowTransaction.get_previous_by_due_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.models.BorrowTransaction.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.number_of_extends">
+<span class="sig-name descname"><span class="pre">number_of_extends</span></span><a class="headerlink" href="#core.models.BorrowTransaction.number_of_extends" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#core.models.BorrowTransaction.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.resource">
+<span class="sig-name descname"><span class="pre">resource</span></span><a class="headerlink" href="#core.models.BorrowTransaction.resource" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.resource_id">
+<span class="sig-name descname"><span class="pre">resource_id</span></span><a class="headerlink" href="#core.models.BorrowTransaction.resource_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.return_resource">
+<span class="sig-name descname"><span class="pre">return_resource</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#BorrowTransaction.return_resource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.BorrowTransaction.return_resource" title="Permalink to this definition"></a></dt>
+<dd><p>Mark the resource as returned.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.returned">
+<span class="sig-name descname"><span class="pre">returned</span></span><a class="headerlink" href="#core.models.BorrowTransaction.returned" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#core.models.BorrowTransaction.user" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.BorrowTransaction.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#core.models.BorrowTransaction.user_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.Category">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">Category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Category"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.Category" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Category for filtering resources.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.Category.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#core.models.Category.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.Category.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#core.models.Category.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Category.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.models.Category.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Category.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#core.models.Category.name" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Category.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#core.models.Category.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Category.resource_set">
+<span class="sig-name descname"><span class="pre">resource_set</span></span><a class="headerlink" href="#core.models.Category.resource_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Category.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#core.models.Category.user" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Category.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#core.models.Category.user_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.FavouriteItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">FavouriteItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#FavouriteItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.FavouriteItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Favourite item within a user’s favourite list.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#core.models.FavouriteItem.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#core.models.FavouriteItem.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.favourite_list">
+<span class="sig-name descname"><span class="pre">favourite_list</span></span><a class="headerlink" href="#core.models.FavouriteItem.favourite_list" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.favourite_list_id">
+<span class="sig-name descname"><span class="pre">favourite_list_id</span></span><a class="headerlink" href="#core.models.FavouriteItem.favourite_list_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.models.FavouriteItem.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#core.models.FavouriteItem.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.resource">
+<span class="sig-name descname"><span class="pre">resource</span></span><a class="headerlink" href="#core.models.FavouriteItem.resource" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.resource_id">
+<span class="sig-name descname"><span class="pre">resource_id</span></span><a class="headerlink" href="#core.models.FavouriteItem.resource_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteItem.share">
+<span class="sig-name descname"><span class="pre">share</span></span><a class="headerlink" href="#core.models.FavouriteItem.share" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.FavouriteList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">FavouriteList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#FavouriteList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.FavouriteList" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Favourite list for users.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.FavouriteList.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#core.models.FavouriteList.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.FavouriteList.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#core.models.FavouriteList.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteList.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.models.FavouriteList.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteList.items">
+<span class="sig-name descname"><span class="pre">items</span></span><a class="headerlink" href="#core.models.FavouriteList.items" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteList.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#core.models.FavouriteList.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteList.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#core.models.FavouriteList.title" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteList.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#core.models.FavouriteList.user" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a one-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Restaurant.place</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.FavouriteList.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#core.models.FavouriteList.user_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.Resource">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">Resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Resource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.Resource" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Resource object.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.Resource.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#core.models.Resource.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.Resource.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#core.models.Resource.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#core.models.Resource.author" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.Resource.borrow">
+<span class="sig-name descname"><span class="pre">borrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">due_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Resource.borrow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.Resource.borrow" title="Permalink to this definition"></a></dt>
+<dd><p>Borrow the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.borrowtransaction_set">
+<span class="sig-name descname"><span class="pre">borrowtransaction_set</span></span><a class="headerlink" href="#core.models.Resource.borrowtransaction_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.categories">
+<span class="sig-name descname"><span class="pre">categories</span></span><a class="headerlink" href="#core.models.Resource.categories" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.code">
+<span class="sig-name descname"><span class="pre">code</span></span><a class="headerlink" href="#core.models.Resource.code" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#core.models.Resource.description" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.favourite_items">
+<span class="sig-name descname"><span class="pre">favourite_items</span></span><a class="headerlink" href="#core.models.Resource.favourite_items" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.file">
+<span class="sig-name descname"><span class="pre">file</span></span><a class="headerlink" href="#core.models.Resource.file" title="Permalink to this definition"></a></dt>
+<dd><p>The descriptor for the file attribute on the model instance. Return a
+FieldFile when accessed so you can write code like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+<p>Assign a file object on assignment so you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/path/to/hello.world&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.Resource.get_actual_borrowed_resources">
+<span class="sig-name descname"><span class="pre">get_actual_borrowed_resources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Resource.get_actual_borrowed_resources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.Resource.get_actual_borrowed_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Get the actual borrowed resources for this resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.Resource.get_previous_borrowed_resources">
+<span class="sig-name descname"><span class="pre">get_previous_borrowed_resources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Resource.get_previous_borrowed_resources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.Resource.get_previous_borrowed_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Get the previous borrowed resources for this resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.Resource.get_year_display">
+<span class="sig-name descname"><span class="pre">get_year_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">year&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.models.Resource.get_year_display" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.models.Resource.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.Resource.is_available">
+<span class="sig-name descname"><span class="pre">is_available</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Resource.is_available"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.Resource.is_available" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the resource is available for borrowing.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.is_available_to_borrow">
+<span class="sig-name descname"><span class="pre">is_available_to_borrow</span></span><a class="headerlink" href="#core.models.Resource.is_available_to_borrow" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.is_available_to_download">
+<span class="sig-name descname"><span class="pre">is_available_to_download</span></span><a class="headerlink" href="#core.models.Resource.is_available_to_download" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.link">
+<span class="sig-name descname"><span class="pre">link</span></span><a class="headerlink" href="#core.models.Resource.link" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#core.models.Resource.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#core.models.Resource.title" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.types">
+<span class="sig-name descname"><span class="pre">types</span></span><a class="headerlink" href="#core.models.Resource.types" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#core.models.Resource.user" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#core.models.Resource.user_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Resource.year">
+<span class="sig-name descname"><span class="pre">year</span></span><a class="headerlink" href="#core.models.Resource.year" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.Type" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Type for filtering resources.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.Type.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#core.models.Type.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.Type.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#core.models.Type.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Type.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.models.Type.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Type.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#core.models.Type.name" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Type.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#core.models.Type.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Type.resource_set">
+<span class="sig-name descname"><span class="pre">resource_set</span></span><a class="headerlink" href="#core.models.Type.resource_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Type.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#core.models.Type.user" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.Type.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#core.models.Type.user_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#User"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.User" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseUser</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">PermissionsMixin</span></code></p>
+<p>User in the system.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.User.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#core.models.User.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="core.models.User.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#core.models.User.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.USERNAME_FIELD">
+<span class="sig-name descname"><span class="pre">USERNAME_FIELD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'username'</span></em><a class="headerlink" href="#core.models.User.USERNAME_FIELD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.auth_token">
+<span class="sig-name descname"><span class="pre">auth_token</span></span><a class="headerlink" href="#core.models.User.auth_token" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the reverse side of a one-to-one
+relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Place.restaurant</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.borrowtransaction_set">
+<span class="sig-name descname"><span class="pre">borrowtransaction_set</span></span><a class="headerlink" href="#core.models.User.borrowtransaction_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.category_set">
+<span class="sig-name descname"><span class="pre">category_set</span></span><a class="headerlink" href="#core.models.User.category_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#core.models.User.email" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.favourite_list">
+<span class="sig-name descname"><span class="pre">favourite_list</span></span><a class="headerlink" href="#core.models.User.favourite_list" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the reverse side of a one-to-one
+relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Place.restaurant</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.groups">
+<span class="sig-name descname"><span class="pre">groups</span></span><a class="headerlink" href="#core.models.User.groups" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.models.User.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><a class="headerlink" href="#core.models.User.is_active" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.is_mediathekar">
+<span class="sig-name descname"><span class="pre">is_mediathekar</span></span><a class="headerlink" href="#core.models.User.is_mediathekar" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.is_staff">
+<span class="sig-name descname"><span class="pre">is_staff</span></span><a class="headerlink" href="#core.models.User.is_staff" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.is_superuser">
+<span class="sig-name descname"><span class="pre">is_superuser</span></span><a class="headerlink" href="#core.models.User.is_superuser" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.last_login">
+<span class="sig-name descname"><span class="pre">last_login</span></span><a class="headerlink" href="#core.models.User.last_login" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.logentry_set">
+<span class="sig-name descname"><span class="pre">logentry_set</span></span><a class="headerlink" href="#core.models.User.logentry_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#core.models.User.name" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;core.models.UserManager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#core.models.User.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.password">
+<span class="sig-name descname"><span class="pre">password</span></span><a class="headerlink" href="#core.models.User.password" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.resource_set">
+<span class="sig-name descname"><span class="pre">resource_set</span></span><a class="headerlink" href="#core.models.User.resource_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.type_set">
+<span class="sig-name descname"><span class="pre">type_set</span></span><a class="headerlink" href="#core.models.User.type_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.user_permissions">
+<span class="sig-name descname"><span class="pre">user_permissions</span></span><a class="headerlink" href="#core.models.User.user_permissions" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.models.User.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#core.models.User.username" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.models.UserManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">UserManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#UserManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.UserManager" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseUserManager</span></code></p>
+<p>Manager for users.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.UserManager.create_superuser">
+<span class="sig-name descname"><span class="pre">create_superuser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'admin&#64;example,com'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#UserManager.create_superuser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.UserManager.create_superuser" title="Permalink to this definition"></a></dt>
+<dd><p>Create and return a new superuser.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.models.UserManager.create_user">
+<span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_fields</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#UserManager.create_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.UserManager.create_user" title="Permalink to this definition"></a></dt>
+<dd><p>Create, save and return a new user.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.models.resource_file_path">
+<span class="sig-prename descclassname"><span class="pre">core.models.</span></span><span class="sig-name descname"><span class="pre">resource_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#resource_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.models.resource_file_path" title="Permalink to this definition"></a></dt>
+<dd><p>Generate file path for a resource.</p>
+</dd></dl>
+
+</section>
+<section id="module-core.views">
+<span id="core-views-module"></span><h2>core.views module<a class="headerlink" href="#module-core.views" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-core">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-core" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, irp0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

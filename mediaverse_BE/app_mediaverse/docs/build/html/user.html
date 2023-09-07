@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>user package &mdash; Mediaverse  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mediaverse
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">user package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-user.apps">user.apps module</a><ul>
+<li><a class="reference internal" href="#user.apps.UserConfig"><code class="docutils literal notranslate"><span class="pre">UserConfig</span></code></a><ul>
+<li><a class="reference internal" href="#user.apps.UserConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">UserConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#user.apps.UserConfig.name"><code class="docutils literal notranslate"><span class="pre">UserConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-user.serializers">user.serializers module</a><ul>
+<li><a class="reference internal" href="#user.serializers.AuthTokenSerializer"><code class="docutils literal notranslate"><span class="pre">AuthTokenSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#user.serializers.AuthTokenSerializer.validate"><code class="docutils literal notranslate"><span class="pre">AuthTokenSerializer.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user.serializers.UserSerializer"><code class="docutils literal notranslate"><span class="pre">UserSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#user.serializers.UserSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">UserSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#user.serializers.UserSerializer.Meta.extra_kwargs"><code class="docutils literal notranslate"><span class="pre">UserSerializer.Meta.extra_kwargs</span></code></a></li>
+<li><a class="reference internal" href="#user.serializers.UserSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">UserSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#user.serializers.UserSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">UserSerializer.Meta.model</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user.serializers.UserSerializer.create"><code class="docutils literal notranslate"><span class="pre">UserSerializer.create()</span></code></a></li>
+<li><a class="reference internal" href="#user.serializers.UserSerializer.update"><code class="docutils literal notranslate"><span class="pre">UserSerializer.update()</span></code></a></li>
+<li><a class="reference internal" href="#user.serializers.UserSerializer.validate"><code class="docutils literal notranslate"><span class="pre">UserSerializer.validate()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-user.urls">user.urls module</a></li>
+<li><a class="reference internal" href="#module-user.views">user.views module</a><ul>
+<li><a class="reference internal" href="#user.views.CreateTokenView"><code class="docutils literal notranslate"><span class="pre">CreateTokenView</span></code></a><ul>
+<li><a class="reference internal" href="#user.views.CreateTokenView.renderer_classes"><code class="docutils literal notranslate"><span class="pre">CreateTokenView.renderer_classes</span></code></a></li>
+<li><a class="reference internal" href="#user.views.CreateTokenView.serializer_class"><code class="docutils literal notranslate"><span class="pre">CreateTokenView.serializer_class</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user.views.CreateUserView"><code class="docutils literal notranslate"><span class="pre">CreateUserView</span></code></a><ul>
+<li><a class="reference internal" href="#user.views.CreateUserView.serializer_class"><code class="docutils literal notranslate"><span class="pre">CreateUserView.serializer_class</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user.views.ManageUserView"><code class="docutils literal notranslate"><span class="pre">ManageUserView</span></code></a><ul>
+<li><a class="reference internal" href="#user.views.ManageUserView.authentication_classes"><code class="docutils literal notranslate"><span class="pre">ManageUserView.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#user.views.ManageUserView.get_object"><code class="docutils literal notranslate"><span class="pre">ManageUserView.get_object()</span></code></a></li>
+<li><a class="reference internal" href="#user.views.ManageUserView.permission_classes"><code class="docutils literal notranslate"><span class="pre">ManageUserView.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#user.views.ManageUserView.serializer_class"><code class="docutils literal notranslate"><span class="pre">ManageUserView.serializer_class</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-user">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mediaverse</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">user package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/user.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-package">
+<h1>user package<a class="headerlink" href="#user-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user.tests.html">user.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.tests.html#module-user.tests.test_user_api">user.tests.test_user_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PrivateUserApiTests"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PrivateUserApiTests.setUp"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PrivateUserApiTests.test_post_me_not_allowed"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.test_post_me_not_allowed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PrivateUserApiTests.test_retrieve_profile_success"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.test_retrieve_profile_success()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PrivateUserApiTests.test_update_user_profile"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.test_update_user_profile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.setUp"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_create_token_bad_credentials"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_bad_credentials()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_create_token_blank_password"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_blank_password()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_create_token_email_not_found"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_email_not_found()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_create_token_for_activated_user"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_for_activated_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_create_token_for_non_active_user"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_for_non_active_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_create_user_success"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_user_success()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_password_too_short_error"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_password_too_short_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_passwords_not_identical"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_passwords_not_identical()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_user_with_email_exists_error"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_user_with_email_exists_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.PublicUserApiTests.test_user_with_username_exists_error"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_user_with_username_exists_error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user.tests.html#user.tests.test_user_api.create_user"><code class="docutils literal notranslate"><span class="pre">create_user()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user.tests.html#module-user.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-user.apps">
+<span id="user-apps-module"></span><h2>user.apps module<a class="headerlink" href="#module-user.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="user.apps.UserConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.apps.</span></span><span class="sig-name descname"><span class="pre">UserConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/apps.html#UserConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.apps.UserConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.apps.UserConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#user.apps.UserConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.apps.UserConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'user'</span></em><a class="headerlink" href="#user.apps.UserConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-user.serializers">
+<span id="user-serializers-module"></span><h2>user.serializers module<a class="headerlink" href="#module-user.serializers" title="Permalink to this heading"></a></h2>
+<p>Serializers for the user API View.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="user.serializers.AuthTokenSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.serializers.</span></span><span class="sig-name descname"><span class="pre">AuthTokenSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/serializers.html#AuthTokenSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.serializers.AuthTokenSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Serializer</span></code></p>
+<p>Serializer for the user auth token.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="user.serializers.AuthTokenSerializer.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/serializers.html#AuthTokenSerializer.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.serializers.AuthTokenSerializer.validate" title="Permalink to this definition"></a></dt>
+<dd><p>Validate and authenticate the user.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.serializers.</span></span><span class="sig-name descname"><span class="pre">UserSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/serializers.html#UserSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.serializers.UserSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for the user object.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/user/serializers.html#UserSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.serializers.UserSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer.Meta.extra_kwargs">
+<span class="sig-name descname"><span class="pre">extra_kwargs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'password':</span> <span class="pre">{'min_length':</span> <span class="pre">6,</span> <span class="pre">'write_only':</span> <span class="pre">True}}</span></em><a class="headerlink" href="#user.serializers.UserSerializer.Meta.extra_kwargs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['username',</span> <span class="pre">'email',</span> <span class="pre">'password',</span> <span class="pre">'password2',</span> <span class="pre">'is_mediathekar',</span> <span class="pre">'is_staff']</span></em><a class="headerlink" href="#user.serializers.UserSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#user.serializers.UserSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="core.html#core.models.User" title="core.models.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validated_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/serializers.html#UserSerializer.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.serializers.UserSerializer.create" title="Permalink to this definition"></a></dt>
+<dd><p>Create and return a user with an encrypted password.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validated_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/serializers.html#UserSerializer.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.serializers.UserSerializer.update" title="Permalink to this definition"></a></dt>
+<dd><p>Update and return the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.serializers.UserSerializer.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/serializers.html#UserSerializer.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.serializers.UserSerializer.validate" title="Permalink to this definition"></a></dt>
+<dd><p>Validate the password fields.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-user.urls">
+<span id="user-urls-module"></span><h2>user.urls module<a class="headerlink" href="#module-user.urls" title="Permalink to this heading"></a></h2>
+<p>URL mappings for the user API.</p>
+</section>
+<section id="module-user.views">
+<span id="user-views-module"></span><h2>user.views module<a class="headerlink" href="#module-user.views" title="Permalink to this heading"></a></h2>
+<p>Views for the user API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="user.views.CreateTokenView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.views.</span></span><span class="sig-name descname"><span class="pre">CreateTokenView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/views.html#CreateTokenView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.views.CreateTokenView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObtainAuthToken</span></code></p>
+<p>Create a new auth token for user.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.views.CreateTokenView.renderer_classes">
+<span class="sig-name descname"><span class="pre">renderer_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.renderers.JSONRenderer'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'rest_framework.renderers.BrowsableAPIRenderer'&gt;]</span></em><a class="headerlink" href="#user.views.CreateTokenView.renderer_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.views.CreateTokenView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#user.views.CreateTokenView.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#user.serializers.AuthTokenSerializer" title="user.serializers.AuthTokenSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">AuthTokenSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="user.views.CreateUserView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.views.</span></span><span class="sig-name descname"><span class="pre">CreateUserView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/views.html#CreateUserView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.views.CreateUserView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">CreateAPIView</span></code></p>
+<p>Create a new user in the system.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.views.CreateUserView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#user.views.CreateUserView.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#user.serializers.UserSerializer" title="user.serializers.UserSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="user.views.ManageUserView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.views.</span></span><span class="sig-name descname"><span class="pre">ManageUserView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/views.html#ManageUserView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.views.ManageUserView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RetrieveUpdateAPIView</span></code></p>
+<p>Manage the authenticated user.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.views.ManageUserView.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#user.views.ManageUserView.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.views.ManageUserView.get_object">
+<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/views.html#ManageUserView.get_object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.views.ManageUserView.get_object" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve and return the authenticated user.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.views.ManageUserView.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#user.views.ManageUserView.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="user.views.ManageUserView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#user.views.ManageUserView.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#user.serializers.UserSerializer" title="user.serializers.UserSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-user">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-user" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, irp0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

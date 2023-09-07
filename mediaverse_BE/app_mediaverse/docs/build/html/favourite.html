@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>favourite package &mdash; Mediaverse  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mediaverse
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">favourite package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-favourite.apps">favourite.apps module</a><ul>
+<li><a class="reference internal" href="#favourite.apps.FavouriteConfig"><code class="docutils literal notranslate"><span class="pre">FavouriteConfig</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.apps.FavouriteConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">FavouriteConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#favourite.apps.FavouriteConfig.name"><code class="docutils literal notranslate"><span class="pre">FavouriteConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-favourite.serializers">favourite.serializers module</a><ul>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteItemSerializer"><code class="docutils literal notranslate"><span class="pre">FavouriteItemSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteItemSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">FavouriteItemSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteItemSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">FavouriteItemSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteItemSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">FavouriteItemSerializer.Meta.model</span></code></a></li>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteItemSerializer.Meta.read_only_fields"><code class="docutils literal notranslate"><span class="pre">FavouriteItemSerializer.Meta.read_only_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteListSerializer"><code class="docutils literal notranslate"><span class="pre">FavouriteListSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteListSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">FavouriteListSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteListSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">FavouriteListSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteListSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">FavouriteListSerializer.Meta.model</span></code></a></li>
+<li><a class="reference internal" href="#favourite.serializers.FavouriteListSerializer.Meta.read_only_fields"><code class="docutils literal notranslate"><span class="pre">FavouriteListSerializer.Meta.read_only_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#favourite.serializers.SharedListSerializer"><code class="docutils literal notranslate"><span class="pre">SharedListSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.serializers.SharedListSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">SharedListSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.serializers.SharedListSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">SharedListSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#favourite.serializers.SharedListSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">SharedListSerializer.Meta.model</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#favourite.serializers.SharedListSerializer.get_shared_items"><code class="docutils literal notranslate"><span class="pre">SharedListSerializer.get_shared_items()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-favourite.tests">favourite.tests module</a></li>
+<li><a class="reference internal" href="#module-favourite.urls">favourite.urls module</a></li>
+<li><a class="reference internal" href="#module-favourite.views">favourite.views module</a><ul>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.basename"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.description"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.detail"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.get_queryset()</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.list"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.list()</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.name"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.perform_create"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.perform_create()</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteItemViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">FavouriteItemViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.basename"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.description"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.detail"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.get_queryset()</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.name"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.perform_create"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.perform_create()</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.FavouriteListViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">FavouriteListViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.basename"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.description"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.detail"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.get_queryset()</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.name"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#favourite.views.SharedListViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">SharedListViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-favourite">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mediaverse</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">favourite package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/favourite.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="favourite-package">
+<h1>favourite package<a class="headerlink" href="#favourite-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-favourite.apps">
+<span id="favourite-apps-module"></span><h2>favourite.apps module<a class="headerlink" href="#module-favourite.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.apps.FavouriteConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">favourite.apps.</span></span><span class="sig-name descname"><span class="pre">FavouriteConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/apps.html#FavouriteConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.apps.FavouriteConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.apps.FavouriteConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#favourite.apps.FavouriteConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.apps.FavouriteConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'favourite'</span></em><a class="headerlink" href="#favourite.apps.FavouriteConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-favourite.serializers">
+<span id="favourite-serializers-module"></span><h2>favourite.serializers module<a class="headerlink" href="#module-favourite.serializers" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteItemSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">favourite.serializers.</span></span><span class="sig-name descname"><span class="pre">FavouriteItemSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/serializers.html#FavouriteItemSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.serializers.FavouriteItemSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for favourite items.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteItemSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/favourite/serializers.html#FavouriteItemSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.serializers.FavouriteItemSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteItemSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'favourite_list',</span> <span class="pre">'resource',</span> <span class="pre">'share']</span></em><a class="headerlink" href="#favourite.serializers.FavouriteItemSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteItemSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#favourite.serializers.FavouriteItemSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="core.html#core.models.FavouriteItem" title="core.models.FavouriteItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">FavouriteItem</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteItemSerializer.Meta.read_only_fields">
+<span class="sig-name descname"><span class="pre">read_only_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'favourite_list']</span></em><a class="headerlink" href="#favourite.serializers.FavouriteItemSerializer.Meta.read_only_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteListSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">favourite.serializers.</span></span><span class="sig-name descname"><span class="pre">FavouriteListSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/serializers.html#FavouriteListSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.serializers.FavouriteListSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for favourite lists.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteListSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/favourite/serializers.html#FavouriteListSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.serializers.FavouriteListSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteListSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'user',</span> <span class="pre">'title']</span></em><a class="headerlink" href="#favourite.serializers.FavouriteListSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteListSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#favourite.serializers.FavouriteListSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="core.html#core.models.FavouriteList" title="core.models.FavouriteList"><code class="xref py py-class docutils literal notranslate"><span class="pre">FavouriteList</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.FavouriteListSerializer.Meta.read_only_fields">
+<span class="sig-name descname"><span class="pre">read_only_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'user']</span></em><a class="headerlink" href="#favourite.serializers.FavouriteListSerializer.Meta.read_only_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.serializers.SharedListSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">favourite.serializers.</span></span><span class="sig-name descname"><span class="pre">SharedListSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/serializers.html#SharedListSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.serializers.SharedListSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for shared favourite lists.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.serializers.SharedListSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/favourite/serializers.html#SharedListSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.serializers.SharedListSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.SharedListSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'title',</span> <span class="pre">'shared_items']</span></em><a class="headerlink" href="#favourite.serializers.SharedListSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.serializers.SharedListSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#favourite.serializers.SharedListSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="core.html#core.models.FavouriteList" title="core.models.FavouriteList"><code class="xref py py-class docutils literal notranslate"><span class="pre">FavouriteList</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="favourite.serializers.SharedListSerializer.get_shared_items">
+<span class="sig-name descname"><span class="pre">get_shared_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/serializers.html#SharedListSerializer.get_shared_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.serializers.SharedListSerializer.get_shared_items" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-favourite.tests">
+<span id="favourite-tests-module"></span><h2>favourite.tests module<a class="headerlink" href="#module-favourite.tests" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-favourite.urls">
+<span id="favourite-urls-module"></span><h2>favourite.urls module<a class="headerlink" href="#module-favourite.urls" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-favourite.views">
+<span id="favourite-views-module"></span><h2>favourite.views module<a class="headerlink" href="#module-favourite.views" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">favourite.views.</span></span><span class="sig-name descname"><span class="pre">FavouriteItemViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#FavouriteItemViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.FavouriteItemViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelViewSet</span></code></p>
+<p>ViewSet for managing favourite items.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#FavouriteItemViewSet.get_queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.get_queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve favourite items for authenticated user with optional filtering.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.list">
+<span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.perform_create">
+<span class="sig-name descname"><span class="pre">perform_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serializer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#FavouriteItemViewSet.perform_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.perform_create" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new favourite item.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#favourite.serializers.FavouriteItemSerializer" title="favourite.serializers.FavouriteItemSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FavouriteItemSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteItemViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteItemViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">favourite.views.</span></span><span class="sig-name descname"><span class="pre">FavouriteListViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#FavouriteListViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.FavouriteListViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelViewSet</span></code></p>
+<p>ViewSet for managing favourite lists.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#favourite.views.FavouriteListViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteListViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteListViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteListViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#FavouriteListViewSet.get_queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.FavouriteListViewSet.get_queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve favourite lists for authenticated user.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteListViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.perform_create">
+<span class="sig-name descname"><span class="pre">perform_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serializer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#FavouriteListViewSet.perform_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.FavouriteListViewSet.perform_create" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new favourite list for the authenticated user.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#favourite.views.FavouriteListViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#favourite.views.FavouriteListViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#favourite.serializers.FavouriteListSerializer" title="favourite.serializers.FavouriteListSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FavouriteListSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.FavouriteListViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.FavouriteListViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">favourite.views.</span></span><span class="sig-name descname"><span class="pre">SharedListViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#SharedListViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.SharedListViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ReadOnlyModelViewSet</span></code></p>
+<p>ViewSet for retrieving shared favourite lists.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#favourite.views.SharedListViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.SharedListViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.SharedListViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.SharedListViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/favourite/views.html#SharedListViewSet.get_queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#favourite.views.SharedListViewSet.get_queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve shared favourite lists.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.SharedListViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#favourite.views.SharedListViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#favourite.views.SharedListViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#favourite.serializers.SharedListSerializer" title="favourite.serializers.SharedListSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SharedListSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="favourite.views.SharedListViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#favourite.views.SharedListViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-favourite">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-favourite" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, irp0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>user.tests package &mdash; Mediaverse  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mediaverse
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">user.tests package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-user.tests.test_user_api">user.tests.test_user_api module</a><ul>
+<li><a class="reference internal" href="#user.tests.test_user_api.PrivateUserApiTests"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests</span></code></a><ul>
+<li><a class="reference internal" href="#user.tests.test_user_api.PrivateUserApiTests.setUp"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PrivateUserApiTests.test_post_me_not_allowed"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.test_post_me_not_allowed()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PrivateUserApiTests.test_retrieve_profile_success"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.test_retrieve_profile_success()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PrivateUserApiTests.test_update_user_profile"><code class="docutils literal notranslate"><span class="pre">PrivateUserApiTests.test_update_user_profile()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests</span></code></a><ul>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.setUp"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.setUp()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_bad_credentials"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_bad_credentials()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_blank_password"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_blank_password()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_email_not_found"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_email_not_found()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_for_activated_user"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_for_activated_user()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_for_non_active_user"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_token_for_non_active_user()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_create_user_success"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_create_user_success()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_password_too_short_error"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_password_too_short_error()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_passwords_not_identical"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_passwords_not_identical()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_user_with_email_exists_error"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_user_with_email_exists_error()</span></code></a></li>
+<li><a class="reference internal" href="#user.tests.test_user_api.PublicUserApiTests.test_user_with_username_exists_error"><code class="docutils literal notranslate"><span class="pre">PublicUserApiTests.test_user_with_username_exists_error()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user.tests.test_user_api.create_user"><code class="docutils literal notranslate"><span class="pre">create_user()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-user.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mediaverse</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">user.tests package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/user.tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-tests-package">
+<h1>user.tests package<a class="headerlink" href="#user-tests-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-user.tests.test_user_api">
+<span id="user-tests-test-user-api-module"></span><h2>user.tests.test_user_api module<a class="headerlink" href="#module-user.tests.test_user_api" title="Permalink to this heading"></a></h2>
+<p>Tests for the user API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PrivateUserApiTests">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.tests.test_user_api.</span></span><span class="sig-name descname"><span class="pre">PrivateUserApiTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PrivateUserApiTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PrivateUserApiTests" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test API requests that require authentication.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PrivateUserApiTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PrivateUserApiTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PrivateUserApiTests.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PrivateUserApiTests.test_post_me_not_allowed">
+<span class="sig-name descname"><span class="pre">test_post_me_not_allowed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PrivateUserApiTests.test_post_me_not_allowed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PrivateUserApiTests.test_post_me_not_allowed" title="Permalink to this definition"></a></dt>
+<dd><p>Test POST is not allowed for the me endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PrivateUserApiTests.test_retrieve_profile_success">
+<span class="sig-name descname"><span class="pre">test_retrieve_profile_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PrivateUserApiTests.test_retrieve_profile_success"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PrivateUserApiTests.test_retrieve_profile_success" title="Permalink to this definition"></a></dt>
+<dd><p>Test retrieving profile for logged in user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PrivateUserApiTests.test_update_user_profile">
+<span class="sig-name descname"><span class="pre">test_update_user_profile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PrivateUserApiTests.test_update_user_profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PrivateUserApiTests.test_update_user_profile" title="Permalink to this definition"></a></dt>
+<dd><p>Test updating the user profile for the authenticated user.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">user.tests.test_user_api.</span></span><span class="sig-name descname"><span class="pre">PublicUserApiTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test the public features of the user API.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_create_token_bad_credentials">
+<span class="sig-name descname"><span class="pre">test_create_token_bad_credentials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_create_token_bad_credentials"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_bad_credentials" title="Permalink to this definition"></a></dt>
+<dd><p>Test returns error if credentials invalid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_create_token_blank_password">
+<span class="sig-name descname"><span class="pre">test_create_token_blank_password</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_create_token_blank_password"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_blank_password" title="Permalink to this definition"></a></dt>
+<dd><p>Test posting a blank password returns an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_create_token_email_not_found">
+<span class="sig-name descname"><span class="pre">test_create_token_email_not_found</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_create_token_email_not_found"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_email_not_found" title="Permalink to this definition"></a></dt>
+<dd><p>Test error returned if user not found for given username.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_create_token_for_activated_user">
+<span class="sig-name descname"><span class="pre">test_create_token_for_activated_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_create_token_for_activated_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_for_activated_user" title="Permalink to this definition"></a></dt>
+<dd><p>Test returns error for valid credentials which were not activated by admin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_create_token_for_non_active_user">
+<span class="sig-name descname"><span class="pre">test_create_token_for_non_active_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_create_token_for_non_active_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_create_token_for_non_active_user" title="Permalink to this definition"></a></dt>
+<dd><p>Test returns error for valid credentials which were not activated by admin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_create_user_success">
+<span class="sig-name descname"><span class="pre">test_create_user_success</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_create_user_success"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_create_user_success" title="Permalink to this definition"></a></dt>
+<dd><p>Test creating a user is successful.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_password_too_short_error">
+<span class="sig-name descname"><span class="pre">test_password_too_short_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_password_too_short_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_password_too_short_error" title="Permalink to this definition"></a></dt>
+<dd><p>Test an error is returned if password less than 6 chars.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_passwords_not_identical">
+<span class="sig-name descname"><span class="pre">test_passwords_not_identical</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_passwords_not_identical"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_passwords_not_identical" title="Permalink to this definition"></a></dt>
+<dd><p>Test an error is returned if passwords not identical</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_user_with_email_exists_error">
+<span class="sig-name descname"><span class="pre">test_user_with_email_exists_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_user_with_email_exists_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_user_with_email_exists_error" title="Permalink to this definition"></a></dt>
+<dd><p>Test error returned if user with email exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="user.tests.test_user_api.PublicUserApiTests.test_user_with_username_exists_error">
+<span class="sig-name descname"><span class="pre">test_user_with_username_exists_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#PublicUserApiTests.test_user_with_username_exists_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.PublicUserApiTests.test_user_with_username_exists_error" title="Permalink to this definition"></a></dt>
+<dd><p>Test error returned if user with username exists.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="user.tests.test_user_api.create_user">
+<span class="sig-prename descclassname"><span class="pre">user.tests.test_user_api.</span></span><span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/user/tests/test_user_api.html#create_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#user.tests.test_user_api.create_user" title="Permalink to this definition"></a></dt>
+<dd><p>Create and return a new user.</p>
+</dd></dl>
+
+</section>
+<section id="module-user.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-user.tests" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, irp0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

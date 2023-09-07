@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>resource package &mdash; Mediaverse  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Mediaverse
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">resource package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-resource.apps">resource.apps module</a><ul>
+<li><a class="reference internal" href="#resource.apps.ResourceConfig"><code class="docutils literal notranslate"><span class="pre">ResourceConfig</span></code></a><ul>
+<li><a class="reference internal" href="#resource.apps.ResourceConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">ResourceConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#resource.apps.ResourceConfig.name"><code class="docutils literal notranslate"><span class="pre">ResourceConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-resource.serializers">resource.serializers module</a><ul>
+<li><a class="reference internal" href="#resource.serializers.CategorySerializer"><code class="docutils literal notranslate"><span class="pre">CategorySerializer</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.CategorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">CategorySerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.CategorySerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">CategorySerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#resource.serializers.CategorySerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">CategorySerializer.Meta.model</span></code></a></li>
+<li><a class="reference internal" href="#resource.serializers.CategorySerializer.Meta.read_only_fields"><code class="docutils literal notranslate"><span class="pre">CategorySerializer.Meta.read_only_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.serializers.ResourceDetailSerializer"><code class="docutils literal notranslate"><span class="pre">ResourceDetailSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.ResourceDetailSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">ResourceDetailSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.ResourceDetailSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">ResourceDetailSerializer.Meta.fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.serializers.ResourceSerializer"><code class="docutils literal notranslate"><span class="pre">ResourceSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.ResourceSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">ResourceSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.ResourceSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">ResourceSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#resource.serializers.ResourceSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">ResourceSerializer.Meta.model</span></code></a></li>
+<li><a class="reference internal" href="#resource.serializers.ResourceSerializer.Meta.read_only_fields"><code class="docutils literal notranslate"><span class="pre">ResourceSerializer.Meta.read_only_fields</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.serializers.ResourceSerializer.create"><code class="docutils literal notranslate"><span class="pre">ResourceSerializer.create()</span></code></a></li>
+<li><a class="reference internal" href="#resource.serializers.ResourceSerializer.update"><code class="docutils literal notranslate"><span class="pre">ResourceSerializer.update()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.serializers.TypeSerializer"><code class="docutils literal notranslate"><span class="pre">TypeSerializer</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.TypeSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">TypeSerializer.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#resource.serializers.TypeSerializer.Meta.fields"><code class="docutils literal notranslate"><span class="pre">TypeSerializer.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#resource.serializers.TypeSerializer.Meta.model"><code class="docutils literal notranslate"><span class="pre">TypeSerializer.Meta.model</span></code></a></li>
+<li><a class="reference internal" href="#resource.serializers.TypeSerializer.Meta.read_only_fields"><code class="docutils literal notranslate"><span class="pre">TypeSerializer.Meta.read_only_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-resource.urls">resource.urls module</a></li>
+<li><a class="reference internal" href="#module-resource.views">resource.views module</a><ul>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.basename"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.description"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.detail"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.name"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.queryset</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllCategoriesViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">AllCategoriesViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.basename"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.description"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.detail"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.get_queryset()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.get_serializer_class"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.get_serializer_class()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.list"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.list()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.name"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.queryset</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllResourcesViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">AllResourcesViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.basename"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.description"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.detail"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.name"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.queryset</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.AllTypesViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">AllTypesViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.basename"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.description"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.detail"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.name"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.queryset</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.CategoryViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">CategoryViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.views.IsMediathekar"><code class="docutils literal notranslate"><span class="pre">IsMediathekar</span></code></a><ul>
+<li><a class="reference internal" href="#resource.views.IsMediathekar.has_permission"><code class="docutils literal notranslate"><span class="pre">IsMediathekar.has_permission()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.basename"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.description"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.detail"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.download"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.download()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.get_queryset"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.get_queryset()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.get_serializer_class"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.get_serializer_class()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.list"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.list()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.name"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.perform_create"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.perform_create()</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.queryset</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.ResourceViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">ResourceViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet"><code class="docutils literal notranslate"><span class="pre">TypeViewSet</span></code></a><ul>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.authentication_classes"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.authentication_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.basename"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.basename</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.description"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.description</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.detail"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.detail</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.name"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.name</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.permission_classes"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.permission_classes</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.queryset</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.serializer_class</span></code></a></li>
+<li><a class="reference internal" href="#resource.views.TypeViewSet.suffix"><code class="docutils literal notranslate"><span class="pre">TypeViewSet.suffix</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-resource">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Mediaverse</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">resource package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/resource.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="resource-package">
+<h1>resource package<a class="headerlink" href="#resource-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resource.tests.html">resource.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resource.tests.html#module-resource.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-resource.apps">
+<span id="resource-apps-module"></span><h2>resource.apps module<a class="headerlink" href="#module-resource.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.apps.ResourceConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.apps.</span></span><span class="sig-name descname"><span class="pre">ResourceConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/apps.html#ResourceConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.apps.ResourceConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.apps.ResourceConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#resource.apps.ResourceConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.apps.ResourceConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'resource'</span></em><a class="headerlink" href="#resource.apps.ResourceConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-resource.serializers">
+<span id="resource-serializers-module"></span><h2>resource.serializers module<a class="headerlink" href="#module-resource.serializers" title="Permalink to this heading"></a></h2>
+<p>Serializers for resouce APIs</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.CategorySerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.serializers.</span></span><span class="sig-name descname"><span class="pre">CategorySerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/serializers.html#CategorySerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.CategorySerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for categories.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.CategorySerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/resource/serializers.html#CategorySerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.CategorySerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.CategorySerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'name']</span></em><a class="headerlink" href="#resource.serializers.CategorySerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.CategorySerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#resource.serializers.CategorySerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="core.html#core.models.Category" title="core.models.Category"><code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.CategorySerializer.Meta.read_only_fields">
+<span class="sig-name descname"><span class="pre">read_only_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id']</span></em><a class="headerlink" href="#resource.serializers.CategorySerializer.Meta.read_only_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.ResourceDetailSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.serializers.</span></span><span class="sig-name descname"><span class="pre">ResourceDetailSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/serializers.html#ResourceDetailSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.ResourceDetailSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#resource.serializers.ResourceSerializer" title="resource.serializers.ResourceSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceSerializer</span></code></a></p>
+<p>Serializer for resource detail view.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.ResourceDetailSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/resource/serializers.html#ResourceDetailSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.ResourceDetailSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#resource.serializers.ResourceSerializer.Meta" title="resource.serializers.ResourceSerializer.Meta"><code class="xref py py-class docutils literal notranslate"><span class="pre">Meta</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.ResourceDetailSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'title',</span> <span class="pre">'author',</span> <span class="pre">'year',</span> <span class="pre">'link',</span> <span class="pre">'code',</span> <span class="pre">'categories',</span> <span class="pre">'types',</span> <span class="pre">'is_available_to_borrow',</span> <span class="pre">'file',</span> <span class="pre">'description']</span></em><a class="headerlink" href="#resource.serializers.ResourceDetailSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.ResourceSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.serializers.</span></span><span class="sig-name descname"><span class="pre">ResourceSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/serializers.html#ResourceSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.ResourceSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for resources.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.ResourceSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/resource/serializers.html#ResourceSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.ResourceSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.ResourceSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'title',</span> <span class="pre">'author',</span> <span class="pre">'year',</span> <span class="pre">'link',</span> <span class="pre">'code',</span> <span class="pre">'categories',</span> <span class="pre">'types',</span> <span class="pre">'is_available_to_borrow',</span> <span class="pre">'file']</span></em><a class="headerlink" href="#resource.serializers.ResourceSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.ResourceSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#resource.serializers.ResourceSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="core.html#core.models.Resource" title="core.models.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resource</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.ResourceSerializer.Meta.read_only_fields">
+<span class="sig-name descname"><span class="pre">read_only_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id']</span></em><a class="headerlink" href="#resource.serializers.ResourceSerializer.Meta.read_only_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.serializers.ResourceSerializer.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validated_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/serializers.html#ResourceSerializer.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.ResourceSerializer.create" title="Permalink to this definition"></a></dt>
+<dd><p>Create a resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.serializers.ResourceSerializer.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validated_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/serializers.html#ResourceSerializer.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.ResourceSerializer.update" title="Permalink to this definition"></a></dt>
+<dd><p>Update resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.TypeSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.serializers.</span></span><span class="sig-name descname"><span class="pre">TypeSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/serializers.html#TypeSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.TypeSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for types.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.serializers.TypeSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/resource/serializers.html#TypeSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.serializers.TypeSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.TypeSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id',</span> <span class="pre">'name']</span></em><a class="headerlink" href="#resource.serializers.TypeSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.TypeSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#resource.serializers.TypeSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="core.html#core.models.Type" title="core.models.Type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.serializers.TypeSerializer.Meta.read_only_fields">
+<span class="sig-name descname"><span class="pre">read_only_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['id']</span></em><a class="headerlink" href="#resource.serializers.TypeSerializer.Meta.read_only_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-resource.urls">
+<span id="resource-urls-module"></span><h2>resource.urls module<a class="headerlink" href="#module-resource.urls" title="Permalink to this heading"></a></h2>
+<p>URL mappings for the resource app.</p>
+</section>
+<section id="module-resource.views">
+<span id="resource-views-module"></span><h2>resource.views module<a class="headerlink" href="#module-resource.views" title="Permalink to this heading"></a></h2>
+<p>Views for the resources APIs</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.views.</span></span><span class="sig-name descname"><span class="pre">AllCategoriesViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#AllCategoriesViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.AllCategoriesViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ReadOnlyModelViewSet</span></code></p>
+<p>Viewset for retrieving all categories.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Category:</span> <span class="pre">a&gt;]&gt;</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#resource.views.AllCategoriesViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#resource.serializers.CategorySerializer" title="resource.serializers.CategorySerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">CategorySerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllCategoriesViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllCategoriesViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.views.</span></span><span class="sig-name descname"><span class="pre">AllResourcesViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#AllResourcesViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.AllResourcesViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ReadOnlyModelViewSet</span></code></p>
+<p>Viewset for retrieving all resources.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#AllResourcesViewSet.get_queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.AllResourcesViewSet.get_queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve resources for authenticated user with the filtering.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.get_serializer_class">
+<span class="sig-name descname"><span class="pre">get_serializer_class</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#AllResourcesViewSet.get_serializer_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.AllResourcesViewSet.get_serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>Return the serializer class for request.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.list">
+<span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resource.views.AllResourcesViewSet.list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Resource:</span> <span class="pre">a&gt;]&gt;</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#resource.views.AllResourcesViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#resource.serializers.ResourceDetailSerializer" title="resource.serializers.ResourceDetailSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceDetailSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllResourcesViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllResourcesViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.views.</span></span><span class="sig-name descname"><span class="pre">AllTypesViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#AllTypesViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.AllTypesViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ReadOnlyModelViewSet</span></code></p>
+<p>Viewset for retrieving all categories.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Type:</span> <span class="pre">Type</span> <span class="pre">object</span> <span class="pre">(1)&gt;]&gt;</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#resource.views.AllTypesViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#resource.serializers.TypeSerializer" title="resource.serializers.TypeSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.AllTypesViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.AllTypesViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.views.</span></span><span class="sig-name descname"><span class="pre">CategoryViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#CategoryViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.CategoryViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DestroyModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">UpdateModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ListModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">GenericViewSet</span></code></p>
+<p>Manage categories in the database.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'resource.views.IsMediathekar'&gt;]</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Category:</span> <span class="pre">a&gt;]&gt;</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#resource.views.CategoryViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#resource.serializers.CategorySerializer" title="resource.serializers.CategorySerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">CategorySerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.CategoryViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.CategoryViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.views.IsMediathekar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.views.</span></span><span class="sig-name descname"><span class="pre">IsMediathekar</span></span><a class="reference internal" href="_modules/resource/views.html#IsMediathekar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.IsMediathekar" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BasePermission</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.IsMediathekar.has_permission">
+<span class="sig-name descname"><span class="pre">has_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#IsMediathekar.has_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.IsMediathekar.has_permission" title="Permalink to this definition"></a></dt>
+<dd><p>Return <cite>True</cite> if permission is granted, <cite>False</cite> otherwise.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.views.</span></span><span class="sig-name descname"><span class="pre">ResourceViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#ResourceViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.ResourceViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelViewSet</span></code></p>
+<p>View for manage resource APIs.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#ResourceViewSet.download"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.ResourceViewSet.download" title="Permalink to this definition"></a></dt>
+<dd><p>Download the resource file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#ResourceViewSet.get_queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.ResourceViewSet.get_queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve resources for authenticated user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.get_serializer_class">
+<span class="sig-name descname"><span class="pre">get_serializer_class</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#ResourceViewSet.get_serializer_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.ResourceViewSet.get_serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>Return the serializer class for request.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.list">
+<span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resource.views.ResourceViewSet.list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.perform_create">
+<span class="sig-name descname"><span class="pre">perform_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serializer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#ResourceViewSet.perform_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.ResourceViewSet.perform_create" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new .</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'resource.views.IsMediathekar'&gt;]</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Resource:</span> <span class="pre">a&gt;]&gt;</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#resource.views.ResourceViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#resource.serializers.ResourceDetailSerializer" title="resource.serializers.ResourceDetailSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceDetailSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.ResourceViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.ResourceViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">resource.views.</span></span><span class="sig-name descname"><span class="pre">TypeViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/resource/views.html#TypeViewSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#resource.views.TypeViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DestroyModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">UpdateModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ListModelMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">GenericViewSet</span></code></p>
+<p>Manage types in the database.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.authentication_classes">
+<span class="sig-name descname"><span class="pre">authentication_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.authentication.TokenAuthentication'&gt;]</span></em><a class="headerlink" href="#resource.views.TypeViewSet.authentication_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.TypeViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.TypeViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.TypeViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.TypeViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'resource.views.IsMediathekar'&gt;]</span></em><a class="headerlink" href="#resource.views.TypeViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Type:</span> <span class="pre">Type</span> <span class="pre">object</span> <span class="pre">(1)&gt;]&gt;</span></em><a class="headerlink" href="#resource.views.TypeViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#resource.views.TypeViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#resource.serializers.TypeSerializer" title="resource.serializers.TypeSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="resource.views.TypeViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#resource.views.TypeViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-resource">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-resource" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, irp0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
